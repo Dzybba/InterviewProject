@@ -1,7 +1,10 @@
 package ru.alfabank.interviewproject
 
+import android.app.Activity
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import dagger.Component
@@ -30,13 +33,15 @@ class MainActivity : AppCompatActivity() {
         /**
         Что нужно сделать
         1 Все лишние классы вынести из этого файла
-        2 Переписать интерфейс сервиса, что бы поддерживал rx
-        3 Так как сервис не рабочий, нужно сделать временную имплементацию, которая будет возвращать
+        2 Переписать интерфейс сервиса, чтобы поддерживал rx
+        3 Результат вызова getUsers нужно отфильтровать, что бы не было null, отсортировать по имени,
+        привести список к мапе вида Map<String, PersonalInfo>, где ключем будет name из PersonalInfo
+        4 Результат вывести в тост
+        5 Сервис PersonalInfoService должен инжектится в активность
+        6 Так как сервис не рабочий, нужно сделать временную имплементацию, которая будет возвращать
         фейковые данные
-        4 Инжектить сервис в эту активность c возможностью выбрать временную реализацию, или сервис созданный ретрофитом
-        5 Результат вызова getUsers нужно отфильтровать, что бы не было null, отсортировать по имени,
-        привести список к мапе вида Map<String, PersonalInfo> где ключем будет name из PersonalInfo
-        6 Результат вывести в тост
+        7 Доработать инжект в эту активность c возможностью выбрать временную имплементацию сервиса
+        либо сервис созданный ретрофитом
          **/
     }
 }
