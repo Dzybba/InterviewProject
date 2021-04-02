@@ -1,23 +1,15 @@
 package ru.alfabank.interviewproject
 
-import android.app.Activity
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import dagger.Component
-import dagger.Module
-import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
 import retrofit2.Call
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import java.util.concurrent.TimeUnit
 
 private const val endpoint = "https://personal.info.com"
 
